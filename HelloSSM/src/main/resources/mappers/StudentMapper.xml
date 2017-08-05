@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        <mapper namespace="com.northgatecode.hellossm.controllers.mappers.StudentMapper">
+    <resultMap id="studentResult" type="com.northgatecode.hellossm.controllers.models.Student">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="mobile" column="mobile"/>
+        <result property="birthday" column="birthday"/>
+        <result property="email" column="email"/>
+        <result property="genderId" column="gender_id"/>
+    </resultMap>
+    <!--<select id="gentAll" resultMap="studentResult">-->
+        <!--SELECT * FROM student-->
+    <!--</select>-->
+    <!--<select id="getAll" resultType="com.northgatecode.hellossm.controllers.models.Student">-->
+        <!--SELECT * FROM student-->
+     <!--</select>-->
+    <!--<select id="getStudentById" parameterType="int" resultType="com.northgatecode.hellossm.controllers.models.Student">-->
+        <!--SELECT * FROM student WHERE id = #{id}-->
+    <!--</select>-->
+    <!--<delete id="delete" parameterType="int" >-->
+        <!--DELETE FROM student WHERE id = #{id}-->
+    <!--</delete>-->
+    <!--<update id="update" parameterType="com.northgatecode.hellossm.controllers.models.Student" >-->
+       <!--UPDATE student SET name = #{name} ,mobile=#{mobile},email=#{email} WHERE id = #{id}-->
+    <!--</update>-->
+    <!--<insert id="insert" parameterType="com.northgatecode.hellossm.controllers.models.Student">-->
+        <!--INSERT INTO student(name,mobile,email)VALUE (#{name},#{mobile},#{email})-->
+    <!--</insert>-->
+</mapper>
