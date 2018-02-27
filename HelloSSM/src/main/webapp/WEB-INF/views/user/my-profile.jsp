@@ -34,8 +34,7 @@
                     <spring:bind path="mobile">
                         <div class="form-group ${status.error ? 'has-error' : ''}">
                             <form:label path="mobile" cssClass="control-label">手机</form:label>
-                            <form:input path="mobile" cssClass="form-control"
-                                        placeholder="请输入手机号码"></form:input>
+                            <form:input path="mobile" cssClass="form-control" placeholder="请输入手机号码"></form:input>
                             <form:errors path="mobile" cssClass="help-block"></form:errors>
                         </div>
                     </spring:bind>
@@ -48,8 +47,7 @@
                     </spring:bind>
                     <div class="form-group">
                         <form:label path="registerDate" cssClass="control-label">注册时间</form:label>
-                        <form:input path="registerDate" cssClass="form-control" placeholder=""
-                                    readonly="true"></form:input>
+                        <form:input path="registerDate" cssClass="form-control" placeholder="" readonly="true"></form:input>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">保存基本信息</button>

@@ -54,6 +54,7 @@ public class UserController {
         return "user/list";
     }
 
+
     @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping(value = "create", method = RequestMethod.GET)
     public String getCreate(ModelMap model,
@@ -63,6 +64,7 @@ public class UserController {
         model.addAttribute("user", user);
         return "user/create";
     }
+
 
     @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping(value = "create", method = RequestMethod.POST)
@@ -82,6 +84,8 @@ public class UserController {
         userService.createUser(user);
         return "redirect:/user/edit?id=" + user.getId();
     }
+
+
 
     @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping(value = "edit", method = RequestMethod.GET)
@@ -111,6 +115,8 @@ public class UserController {
         userMapper.updateUserBaseInfo(user);
         return "redirect:/user/edit?id=" + user.getId();
     }
+
+
 
     @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping(value = "password", method = RequestMethod.GET)
@@ -240,7 +246,6 @@ public class UserController {
         }
         user.setPassword(DigestUtils.md5DigestAsHex(userPassword.getNewPassword().getBytes()));
         userMapper.updateUserPassword(user);
-
         model.addAttribute("success", "密码修改成功");
 
         return "user/my-password";

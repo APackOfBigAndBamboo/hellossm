@@ -43,7 +43,6 @@ public class StudentController {
         model.addAttribute("pageSize", pageSize);
         model.addAttribute("students", students);
         return "Student/list";
-
     }
 //    @RequestMapping(value = "list", method = RequestMethod.POST)
 //    public String postList(ModelMap model,@RequestParam String name ,@RequestParam Integer genderId) {

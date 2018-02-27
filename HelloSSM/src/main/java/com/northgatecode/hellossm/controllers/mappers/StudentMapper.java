@@ -16,7 +16,6 @@ public interface StudentMapper {
     List<Student> getStudentsByEmail(String email);
 
     @SelectProvider(type = DynamicSQLProvider.class,method = "getsearch")
-
     @Results(
             {
                     @Result(id = true, column = "id", property = "id"),
